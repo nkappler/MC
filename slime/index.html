@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mieges Chaotenserver | Slime-Map</title>
+    <script src="slime.js"></script>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body style="height: 100%; margin: 0; background-color: #CED4DE; position: absolute; width: 100%">
+    <p>
+        <a href="../"><button>Zurück</button></a>
+    </p>
+    <div id="slimemap" style="height: calc(100% - 100px)"></div>
+    <script>
+        var sm = new SlimeMap("slimemap", {
+            seed: "-6931047708307681506"
+        });
+
+        sm.markers = sm.markers.concat([
+            {
+                location: {
+                    x: 150,
+                    z: 370
+                },
+                label: "Startdorf",
+                color: "brown"
+            },
+            {
+                location: {
+                    x: -800,
+                    z: -200
+                },
+                label: "(Auto-)Farmen",
+                color: "burlywood"
+            },
+            {
+                location: {
+                    x: 14,
+                    z: 490
+                },
+                label: "Annikas Höhle",
+                color: "grey"
+            },
+            {
+                location: {
+                    x: 60,
+                    z: 150
+                },
+                label: "Mike u. Juckys Base",
+                color: "darkgreen"
+            },
+            {
+                location: {
+                    x: 270,
+                    z: 470
+                },
+                label: "Pfeilspitze",
+                color: "lightgrey"
+            },
+            {
+                location: {
+                    x: 800,
+                    z: -400
+                },
+                label: "Ozeanmonument",
+                color: "darkcyan"
+            }
+        ]);
+
+        sm.zoom = 0.7;
+        sm.redraw();
+
+    </script>
+</body>
+
+</html>
