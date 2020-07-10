@@ -8,21 +8,31 @@
     <title>Mieges Chaotenserver</title>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.png">
     <style>
-        * {
-            font-family: sans-serif;
-        }
-
         html,
         body {
             height: 100%;
             margin: 0;
+            background-color: rgb(208, 227, 240);
+        }
+
+        * {
+            font-family: sans-serif;
+        }
+
+        .wrapper {
+            margin: -680px -30px 0;
+        }
+
+        .container {
+            width: 850px;
             overflow: hidden;
+            margin: 0 auto;
         }
 
         iframe {
             border: 0;
-            width: 100%;
-            height: calc(100% - 55px);
+            width: 917px;
+            height: 1385px;
             margin: 0;
         }
 
@@ -66,12 +76,18 @@
 <body>
     <header>
         <div class="menu">
-            <a href="index.html" class="active">Karte</a>
-            <a href="biome.html">Biomkarte</a>
+            <a href="index.html">Karte</a>
+            <a href="biome.html" class="active">Biomkarte</a>
             <a href="slime.html">Slimechunk Karte</a>
         </div>
     </header>
-    <iframe src="http://134.255.219.50:22546/"></iframe>
+
+    <div class="container">
+        <div class="wrapper">
+            <iframe id="iframe" src="https://www.chunkbase.com/apps/biome-finder#64093444" scrolling="no"></iframe>
+        </div>
+    </div>
+
 </body>
 
 </html>
